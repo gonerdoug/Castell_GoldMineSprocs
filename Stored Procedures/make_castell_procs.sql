@@ -1,3 +1,5 @@
+--This script will drop and recreate ALL current Castell procedures.
+
 
 /****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 11/19/2018 11:06:18 ******/
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_ChangeName]') AND type in (N'P', N'PC'))
