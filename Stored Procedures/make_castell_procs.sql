@@ -1,158 +1,127 @@
---This script will drop and recreate ALL current Castell procedures.
 
-
-/****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_ChangeName]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_ChangeName]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_Copy]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_Copy]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_Copy]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_Count]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_Count]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_Count]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_Create]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_Create]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_Create]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_CreateCopy]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_CreateCopy]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_CreateCopy]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_Delete]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_Delete]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_Delete]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_EraseAll]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_EraseAll]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_EraseAll]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_EraseName]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_EraseName]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_EraseName]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_FormatPhone]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_FormatPhone]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_FormatPhone]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_GetNameFromIndex]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_GetNameFromIndex]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_GetNameFromIndex]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_GetValue]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_GetValue]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_GetValue]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_GetValueFromIndex]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_GetValueFromIndex]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_GetValueFromIndex]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_NameExists]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_NameExists]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_NameExists]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_SetValue]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_SetValue]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_SetValue]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSummary]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_UpdateSummary]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_UpdateSummary]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSyncLog]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_UpdateSyncLog]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_UpdateSyncLog]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContact]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteContact]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteContact]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContactNotes]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteContactNotes]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteContactNotes]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContsupp]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteContsupp]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteContsupp]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteDetail]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteDetail]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteDetail]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroup]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteGroup]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteGroup]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroupMember]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteGroupMember]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteGroupMember]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteHistory]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteHistory]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteHistory]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteLinkedDoc]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteLinkedDoc]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteLinkedDoc]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteMailbox]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteMailbox]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteMailbox]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOpportunity]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteOpportunity]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteOpportunity]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOtherContact]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteOtherContact]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteOtherContact]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteRelationship]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteRelationship]') AND type in (N'P', N'PC'))
-DROP PROCEDURE [dbo].[Castell_WriteRelationship]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteSchedule]    Script Date: 11/19/2018 11:06:18 ******/
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Castell_WriteSchedule]') AND type in (N'P', N'PC'))
+/****** Object:  StoredProcedure [dbo].[Castell_WriteSchedule]    Script Date: 3/21/2019 10:22:51 AM ******/
 DROP PROCEDURE [dbo].[Castell_WriteSchedule]
 GO
 
+/****** Object:  StoredProcedure [dbo].[Castell_WriteRelationship]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteRelationship]
+GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteOtherContact]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteOtherContact]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteOpportunity]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteOpportunity]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteMailbox]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteMailbox]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteLinkedDoc]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteLinkedDoc]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteHistory]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteHistory]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteGroupMember]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteGroupMember]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteGroup]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteGroup]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteDetail]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteDetail]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteContsupp]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteContsupp]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteContactNotes]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteContactNotes]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_WriteContact]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_WriteContact]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_UpdateSyncLog]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_UpdateSyncLog]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_UpdateSummary]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_UpdateSummary]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_SetValue]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_SetValue]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_NameExists]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_NameExists]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_GetValueFromIndex]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_GetValueFromIndex]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_GetValue]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_GetValue]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_GetNameFromIndex]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_GetNameFromIndex]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_FormatPhone]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_FormatPhone]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_EraseName]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_EraseName]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_EraseAll]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_EraseAll]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_Delete]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_Delete]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_CreateCopy]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_CreateCopy]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_Create]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_Create]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_Count]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_Count]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_Copy]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_Copy]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE [dbo].[Castell_ChangeName]
+GO
+
+/****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -190,14 +159,16 @@ RETURN @upcount
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Copy]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_Copy]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -223,14 +194,16 @@ RETURN 1
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Count]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_Count]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -265,14 +238,16 @@ RETURN @retval
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Create]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_Create]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -311,14 +286,16 @@ ELSE
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_CreateCopy]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_CreateCopy]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -346,14 +323,16 @@ EXEC ('INSERT INTO ##gmnv' + @copy + ' SELECT * FROM ##gmnv' + @gmnv)
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Delete]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_Delete]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -378,14 +357,16 @@ ELSE RETURN -120
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_EraseAll]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_EraseAll]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -407,14 +388,16 @@ EXEC('DELETE FROM ##gmnv' + @gmnv)
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_EraseName]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_EraseName]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -439,14 +422,16 @@ EXEC('DELETE FROM ##gmnv' + @gmnv + ' WHERE UPPER(fieldname) = '' + @name + ''')
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_FormatPhone]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_FormatPhone]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -501,14 +486,16 @@ RETURN @retval
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetNameFromIndex]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_GetNameFromIndex]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -572,14 +559,16 @@ SELECT @name = @namefield
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetValue]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_GetValue]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -615,14 +604,16 @@ SELECT @value = value FROM #temptable
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetValueFromIndex]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_GetValueFromIndex]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -677,14 +668,16 @@ SELECT @value = @valuefield
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_NameExists]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_NameExists]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -747,14 +740,16 @@ RETURN @retval
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_SetValue]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_SetValue]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -821,14 +816,16 @@ RETURN isnull(@maxindex, '0')
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSummary]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_UpdateSummary]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS OFF
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1129,14 +1126,16 @@ IF UPPER(@table) = 'CONTHIST'
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSyncLog]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_UpdateSyncLog]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1393,14 +1392,16 @@ RETURN @retval
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContact]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteContact]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1606,12 +1607,21 @@ WHILE @@fetch_status = 0
 		IF @fieldname in (select field_name from CONTUDEF where FLDOPTS='1')
 			begin
 				set @accountno = (select accountno FROM contact1 WHERE recid = @recid)
-				set @oldvalquery = 'select @oldvalue=isnull(['+@fieldname+'],'''') from CONTACT1, CONTACT2 where contact1.ACCOUNTNO=contact2.ACCOUNTNO and contact1.recid='''+@recid+''''
+
+				--if field is numeric, convert the value appropriately
+				IF UPPER(@datatype) IN ('FLOAT', 'INT', 'REAL','NUMERIC','SMALLINT','TINYINT','DECIMAL')
+					BEGIN
+						set @oldvalquery = 'select @oldvalue=ltrim(rtrim(isnull(convert(nvarchar(18),convert(bigint,['+@fieldname+'])),''''))) from CONTACT1, CONTACT2 where contact1.ACCOUNTNO=contact2.ACCOUNTNO and contact1.recid='''+@recid+''''
+					END
+				ELSE
+					BEGIN
+						set @oldvalquery = 'select @oldvalue=ltrim(rtrim(isnull(['+@fieldname+'],''''))) from CONTACT1, CONTACT2 where contact1.ACCOUNTNO=contact2.ACCOUNTNO and contact1.recid='''+@recid+''''
+					END
 				
 				Exec sp_executesql @oldvalquery, N'@oldvalue nvarchar(100) output', @oldvalue output
  				
  				--get field local label top result from fields5 and build ref with that.
- 				set @fieldnamelocallabel=(select top 1 replace(replace(replace(replace(label,'"',''),'''',''),'+',''),'%','') fldlabel  from FIELDS5 where RECTYPE='F' and fldname='key1' order by recid)
+ 				set @fieldnamelocallabel=(select top 1 replace(replace(replace(replace(label,'"',''),'''',''),'+',''),'%','') fldlabel  from FIELDS5 where RECTYPE='F' and fldname=@fieldname order by recid)
  				
  				if @oldvalue <> @value
  					BEGIN
@@ -1823,14 +1833,16 @@ IF @url IS NOT NULL
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContactNotes]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteContactNotes]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1900,14 +1912,16 @@ else
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContsupp]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteContsupp]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2063,14 +2077,16 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteDetail]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteDetail]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -2218,14 +2234,16 @@ EXEC Castell_Delete @tempgmnv
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroup]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteGroup]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2382,14 +2400,16 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroupMember]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteGroupMember]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2557,14 +2577,16 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteHistory]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteHistory]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2595,7 +2617,7 @@ DECLARE @currdate datetime,
 		@status varchar(2),
 		@duration varchar(8),
 		@units varchar(8),
-		@ref varchar(65),
+		@ref varchar(80),
 		@linkrecid varchar(15),
 		@loprecid varchar(15),
 		@successprivate varchar(2),
@@ -2910,17 +2932,13 @@ SELECT @value = NULL
 EXEC Castell_SetValue @tempgmnv, 'ondate', @ondate 
 EXEC Castell_SetValue @tempgmnv, 'ontime', @ontime
 
-
 /*build the reference line w/ the contact name*/
-SELECT @ref = CASE WHEN @ref IS NULL AND @contact IS NOT NULL THEN
-                                    '(oc:' + @contact + ')'
-                                    WHEN @ref IS NOT NULL AND @contact IS NOT NULL THEN
-                                        @ref + ' (oc:' + @contact + ')'
-                                    WHEN @ref IS NULL AND @contact IS NULL THEN
-                                        '(oc:)'
-                                    WHEN @ref IS NOT NULL AND @contact IS NULL THEN
-                                        @ref + ' (oc:)'
-                                END
+SELECT @ref = CASE 
+	WHEN @ref IS NULL AND @contact IS NOT NULL THEN '(oc:' + @contact + ')'
+	WHEN @ref IS NOT NULL AND @contact IS NOT NULL THEN @ref + ' (oc:' + @contact + ')'
+	WHEN @ref IS NULL AND @contact IS NULL THEN '(oc:)'
+	WHEN @ref IS NOT NULL AND @contact IS NULL THEN @ref + ' (oc:)'
+END
 
 EXEC Castell_SetValue @tempgmnv, 'ref', @ref
 
@@ -2991,14 +3009,16 @@ IF @accountno IS NOT NULL
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteLinkedDoc]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteLinkedDoc]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3217,14 +3237,16 @@ EXEC Castell_Delete @tempgmnv
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteMailbox]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteMailbox]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3561,14 +3583,16 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOpportunity]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteOpportunity]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3767,14 +3791,16 @@ EXEC Castell_Delete @tempgmnv
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOtherContact]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteOtherContact]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3931,14 +3957,16 @@ IF @email IS NOT NULL
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteRelationship]    Script Date: 11/19/2018 11:06:18 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteRelationship]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -4094,14 +4122,16 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 
 
+
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteSchedule]    Script Date: 11/19/2018 11:06:19 ******/
+/****** Object:  StoredProcedure [dbo].[Castell_WriteSchedule]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -4580,6 +4610,7 @@ IF UPPER(@notify) = 'Y' AND UPPER(@rectype) IN ('C','T','A','O','E')
 
 IF @accountno IS NOT NULL
     EXEC('EXEC ' + @contactdb + 'Castell_UpdateSummary "' + @accountno + '", "CAL", "' + @user + '", "' + @caldb + '"')
+
 
 
 
