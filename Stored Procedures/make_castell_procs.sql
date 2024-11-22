@@ -1,126 +1,102 @@
-
-/****** Object:  StoredProcedure [dbo].[Castell_WriteSchedule]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteSchedule]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteSchedule]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteRelationship]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteRelationship]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteRelationship]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOtherContact]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteOtherContact]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteRecordAlert]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOpportunity]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteOpportunity]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteProject]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteMailbox]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteMailbox]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteOtherContact]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteLinkedDoc]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteLinkedDoc]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteOpportunity]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteHistory]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteHistory]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteMailbox]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroupMember]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteGroupMember]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteLinkedDoc]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroup]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteGroup]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteHistory]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteDetail]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteDetail]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteGroupMember]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContsupp]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteContsupp]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteGroup]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContactNotes]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteContactNotes]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteDetail]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContact]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_WriteContact]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteContsupp]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSyncLog]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_UpdateSyncLog]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteContactNotes]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSummary]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_UpdateSummary]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_WriteContact]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_SetValue]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_SetValue]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_UpdateSyncLog]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_NameExists]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_NameExists]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_UpdateSummary]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetValueFromIndex]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_GetValueFromIndex]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_SetValue]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetValue]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_GetValue]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_NameExists]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetNameFromIndex]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_GetNameFromIndex]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_GetValueFromIndex]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_FormatPhone]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_FormatPhone]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_GetValue]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_EraseName]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_EraseName]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_GetNameFromIndex]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_EraseAll]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_EraseAll]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_FormatPhone]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Delete]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_Delete]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_EraseName]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_CreateCopy]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_CreateCopy]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_EraseAll]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Create]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_Create]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_Delete]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Count]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_Count]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_CreateCopy]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Copy]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_Copy]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_Create]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 3/21/2019 10:22:51 AM ******/
-DROP PROCEDURE [dbo].[Castell_ChangeName]
+DROP PROCEDURE IF EXISTS [dbo].[Castell_Count]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_ChangeName]    Script Date: 3/21/2019 10:22:51 AM ******/
+DROP PROCEDURE IF EXISTS [dbo].[Castell_Copy]
+GO
+
+DROP PROCEDURE IF EXISTS [dbo].[Castell_ChangeName]
+GO
+
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -162,12 +138,12 @@ RETURN @upcount
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Copy]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -197,12 +173,12 @@ RETURN 1
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Count]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -241,12 +217,12 @@ RETURN @retval
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Create]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -260,19 +236,17 @@ AS
 /* RETURNS -120 IF THE TABLE ALREADY EXISTS*/
 SET NOCOUNT ON
 
-DECLARE @dDate datetime
-DECLARE @sTime varchar(8)
+DECLARE @dDate datetime,
+		@sTime varchar(8)
 
 SELECT @dDate = getdate()
+SELECT @sTime = RIGHT(REPLICATE('0', 8) + CONVERT(varchar,(3600 * DATEPART(hour, @dDate)) + (60 * DATEPART(minute, @dDate)) + DATEPART(second, @dDate)) + CONVERT(varchar,DATEPART(ms, @dDate)), 8)
 
-SELECT @sTime = RIGHT(REPLICATE('0', 8) + 
-                CONVERT(varchar,(3600 * DATEPART(hour, @dDate)) + (60 * DATEPART(minute, @dDate)) + 
-                     DATEPART(second, @dDate)) + CONVERT(varchar,DATEPART(ms, @dDate)), 8)
-
-IF (SELECT object_id('tempdb..##gmnv' + @sTime )) IS NULL
+IF (SELECT object_id('##gmnv' + @sTime)) IS NULL
     BEGIN
-        EXEC ('DECLARE @index int DECLARE @name varchar(20) DECLARE @value varchar(8000) SELECT @index "indexval", @name "fieldname", @value "value" INTO ##gmnv' + @sTime)
-        EXEC ('DELETE FROM ##gmnv' + @sTime)
+		EXEC ('CREATE TABLE ' + '##gmnv' + @sTime + ' (indexval int, fieldname varchar(20), value varchar(max))')
+        --EXEC ('DECLARE @index int DECLARE @name varchar(20) DECLARE @value varchar(8000) SELECT @index "indexval", @name "fieldname", @value "value" INTO ##gmnv' + @sTime)
+        --EXEC ('DELETE FROM ##gmnv' + @sTime)
         SELECT @gmnv = @sTime
     END
 ELSE
@@ -289,12 +263,12 @@ ELSE
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_CreateCopy]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -326,12 +300,12 @@ EXEC ('INSERT INTO ##gmnv' + @copy + ' SELECT * FROM ##gmnv' + @gmnv)
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_Delete]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -342,15 +316,14 @@ GO
 CREATE PROCEDURE [dbo].[Castell_Delete] (@gmnv varchar(20))
     
 AS
-DECLARE @SQL AS NVARCHAR(200)
+
 SET NOCOUNT ON
 
-IF (SELECT object_id('tempdb..##gmnv' + @gmnv )) IS NOT NULL
+IF (SELECT object_id('##gmnv' + @gmnv )) IS NOT NULL
     BEGIN
-		SET @SQL = 'DROP TABLE ' + '##gmnv' + @gmnv 
-		EXECUTE sp_executesql @SQL
+		EXEC( 'DROP TABLE ' + '##gmnv' + @gmnv )
     END
-    --EXEC Castell_EraseAll @gmnv
+
 ELSE RETURN -120
 
     
@@ -360,12 +333,12 @@ ELSE RETURN -120
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_EraseAll]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -391,12 +364,12 @@ EXEC('DELETE FROM ##gmnv' + @gmnv)
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_EraseName]    Script Date: 3/21/2019 10:22:51 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -425,12 +398,12 @@ EXEC('DELETE FROM ##gmnv' + @gmnv + ' WHERE UPPER(fieldname) = '' + @name + ''')
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_FormatPhone]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -489,12 +462,12 @@ RETURN @retval
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetNameFromIndex]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -562,7 +535,6 @@ SELECT @name = @namefield
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetValue]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -576,7 +548,8 @@ GO
 
 
 
-CREATE PROCEDURE [dbo].[Castell_GetValue] (@gmnv varchar(20), @name varchar(20), @value varchar(8000) OUTPUT)
+
+CREATE PROCEDURE [dbo].[Castell_GetValue] (@gmnv varchar(20), @name varchar(20), @value varchar(max) OUTPUT)
     
 AS
 
@@ -607,12 +580,12 @@ SELECT @value = value FROM #temptable
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_GetValueFromIndex]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -671,12 +644,12 @@ SELECT @value = @valuefield
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_NameExists]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -743,7 +716,6 @@ RETURN @retval
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_SetValue]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -757,7 +729,8 @@ GO
 
 
 
-CREATE PROCEDURE [dbo].[Castell_SetValue](@gmnv varchar(20), @fieldname varchar(20), @value varchar(8000))
+
+CREATE PROCEDURE [dbo].[Castell_SetValue](@gmnv varchar(20), @fieldname varchar(20), @value varchar(MAX))
 
 AS
 
@@ -819,12 +792,12 @@ RETURN isnull(@maxindex, '0')
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSummary]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS OFF
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1129,12 +1102,12 @@ IF UPPER(@table) = 'CONTHIST'
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_UpdateSyncLog]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1395,7 +1368,6 @@ RETURN @retval
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContact]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -1416,7 +1388,7 @@ DECLARE @setcmd1    varchar(max),
 		@tempphone varchar(25), 
 		@status varchar(3), 
 		@email varchar(255),
-		@sub_contact varchar(20),
+		@sub_contact varchar(40),
 		@url varchar(255), 
 		@contact varchar(40), 
 		@company varchar(40), 
@@ -1564,8 +1536,6 @@ IF @recid IS NULL /*creating a new recod*/
  				END
 		+ 
 		')'		
-		--DEBUG 
-		--print @insertstr + ' ' + @valuestr
 
         EXEC (@insertstr + ' ' + @valuestr)
          /*Update Tlogs*/
@@ -1585,7 +1555,6 @@ EXEC ('SELECT fieldname, value FROM ##gmnv' + @tempgmnv)
 
 EXEC Castell_Delete @tempgmnv
 
-----------------------NEW CODE BEGIN----------------------
 DECLARE fieldcursor CURSOR 
 FOR SELECT name, value FROM #tempgmnv
 
@@ -1673,9 +1642,6 @@ WHILE @@fetch_status = 0
 					ELSE '''' + @recid + ''''
  				END
 
-				--DEBUG 
-				--print 'UPDATE contact1 SET ' + @setcmd1
-
 				EXEC('UPDATE contact1 SET ' + @setcmd1)
 
 				--EXEC Castell_UpdateSyncLog @tablename, @recid, @user, 'U', @fieldname
@@ -1683,13 +1649,12 @@ WHILE @@fetch_status = 0
 
         IF UPPER(@tablename) = 'CONTACT2'
             BEGIN
-                /*this block of accountno and recid steps should only occur once at the most*/
                 set @accountno = (select accountno FROM contact1 WHERE recid = @recid)
 
                 IF @c2recid IS NULL
                     SELECT @C2recid = recid FROM contact2 WHERE accountno = @accountno
 
-                IF @c2recid IS /*STILL*/ NULL --there is no contact2 record for this contact
+                IF @c2recid IS /*STILL*/ NULL --there is no contact2 record for this contact!
                     BEGIN
                         /*get a recid*/
                         set @c2recid = (select dbo.Castell_RecId('MASTER'))
@@ -1728,8 +1693,6 @@ WHILE @@fetch_status = 0
 	END
 CLOSE fieldcursor
 DEALLOCATE fieldcursor
-
-----------------------NEW CODE END----------------------
 
 If @notes is not NULL
 	BEGIN
@@ -1774,11 +1737,11 @@ IF @email IS NOT NULL
                      END
             END
 
-		select @sub_contact=substring(@contact,0,20)
+		select @sub_contact=substring(@contact,0,40)
 
         EXEC Castell_SetValue @tempgmnv, 'accountno', @accountno
         EXEC Castell_SetValue @tempgmnv, 'ufield2', @recid
-        EXEC Castell_SetValue @tempgmnv, 'ufield8', @sub_contact
+        EXEC Castell_SetValue @tempgmnv, 'ufield11', @sub_contact
         EXEC Castell_SetValue @tempgmnv, 'status', '00'
         EXEC Castell_SetValue @tempgmnv, 'ufield4', '0100'
         EXEC Castell_SetValue @tempgmnv, 'ufield6', '011'
@@ -1836,12 +1799,12 @@ IF @url IS NOT NULL
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContactNotes]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1857,7 +1820,7 @@ AS
 DECLARE @recid     varchar(15),
 		@c1recid   varchar(15),
 		@accountno varchar(20),
-		@notes     varchar(8000),
+		@notes     varchar(max),
 		@user      varchar(8),
 		@valid     int,
 		@createddate datetime
@@ -1915,12 +1878,12 @@ else
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteContsupp]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -1947,12 +1910,12 @@ DECLARE @currdate datetime,
 		@accountno varchar(20),
 		@rectype varchar(1),
 		@name varchar(20),
-		@value varchar(8000),
+		@value varchar(max),
 		@datatype varchar(20),
 		@setcmd1 varchar(max),
 		@userid varchar(8),
 		@namefield varchar(20),
-		@valuefield varchar(8000),
+		@valuefield varchar(max),
 		@notesptr binary(16),
 		@valid int
 
@@ -2080,12 +2043,12 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteDetail]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -2111,7 +2074,7 @@ DECLARE @user varchar(8)
 DECLARE @tempgmnv varchar(20)
 DECLARE @caldb varchar(123)
 DECLARE @tempsql varchar(1000)
-DECLARE @tempvalue varchar(8000)
+DECLARE @tempvalue varchar(max)
 
 SET NOCOUNT ON
 
@@ -2237,12 +2200,12 @@ EXEC Castell_Delete @tempgmnv
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroup]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2403,12 +2366,12 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteGroupMember]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2580,12 +2543,12 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteHistory]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -2625,12 +2588,12 @@ DECLARE @currdate datetime,
 		@calcreateby varchar(8),
 		@setcmd varchar(1000),
 		@fieldname varchar(50),
-		@value varchar(8000),
+		@value varchar(max),
 		@datatype varchar(20),
 		@tempgmnv varchar(15),
 		@rsvpgmnv varchar(15),
 		@namefield varchar(20),
-		@valuefield varchar(8000),
+		@valuefield varchar(max),
 		@valid int,
 		@notesptr binary(16),
 		@caldb varchar(123),
@@ -3012,12 +2975,12 @@ IF @accountno IS NOT NULL
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteLinkedDoc]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3240,12 +3203,12 @@ EXEC Castell_Delete @tempgmnv
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteMailbox]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3284,7 +3247,7 @@ DECLARE @currdate varchar(10),
 		@datatype varchar(20),
 		@tempgmnv varchar(15),
 		@namefield varchar(20),
-		@valuefield varchar(8000),
+		@valuefield varchar(max),
 		@valid int,
 		@caldb varchar(128),
 		@contactdb varchar(128),
@@ -3586,12 +3549,12 @@ EXEC Castell_SetValue @gmnv, 'recid', @recid
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOpportunity]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -3610,16 +3573,16 @@ DECLARE @setcmd1 varchar(max),
 		@contact varchar(40), 
 		@company varchar(40), 
 		@fieldname varchar(50),
-		@value varchar(8000), 
+		@value varchar(max), 
 		@datatype varchar(32), 
 		@accountno varchar(20), 
 		@currtime varchar(5), 
 		@gmversion int, 
-		@valuestr varchar(8000), 
+		@valuestr varchar(max), 
 		@namefield varchar(20), 
-		@valuefield varchar(8000), 
+		@valuefield varchar(max), 
 		@tempgmnv varchar(20),
-		@notes varchar(8000),
+		@notes varchar(max),
 		@nrecid varchar(15),
 		@actvcode varchar(3),
 		@closedate datetime,
@@ -3794,7 +3757,6 @@ EXEC Castell_Delete @tempgmnv
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteOtherContact]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -3806,12 +3768,13 @@ GO
 
 
 
+
 CREATE PROCEDURE [dbo].[Castell_WriteOtherContact] (@gmnv varchar(20))
 AS
 
 DECLARE @nonusaphone varchar(1),
 		@tempphone varchar(20),
-		@tempvalue varchar(8000),
+		@tempvalue varchar(max),
 		@emailgmnv varchar(20),
 		@email varchar(35),
 		@tempgmnv varchar(20),
@@ -3960,7 +3923,227 @@ IF @email IS NOT NULL
 
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteRelationship]    Script Date: 3/21/2019 10:22:52 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER OFF
+GO
+
+
+
+CREATE PROCEDURE [dbo].[Castell_WriteProject] (@gmnv varchar(20))
+AS
+DECLARE @setcmd1 varchar(max),
+		@user varchar(8), 
+		@recid varchar(15), 
+		@crecid varchar(15),
+		@contact varchar(40), 
+		@company varchar(40), 
+		@fieldname varchar(50),
+		@value varchar(max), 
+		@datatype varchar(32), 
+		@accountno varchar(20), 
+		@currtime varchar(5), 
+		@gmversion int, 
+		@valuestr varchar(max), 
+		@namefield varchar(20), 
+		@valuefield varchar(max), 
+		@tempgmnv varchar(20),
+		@notes varchar(max),
+		@nrecid varchar(15),
+		@actvcode varchar(3),
+		@closedate datetime
+
+SET NOCOUNT ON
+
+IF (SELECT object_id('tempdb..##gmnv' + @gmnv )) IS NULL
+            RETURN -120
+
+EXEC Castell_CreateCopy @gmnv, @tempgmnv OUTPUT
+
+--retrieve necessary data from gmnv
+EXEC Castell_GetValue @tempgmnv, 'userid', @user OUTPUT
+EXEC Castell_EraseName @tempgmnv, 'userid'
+EXEC Castell_GetValue @tempgmnv, 'gmversion', @gmversion OUTPUT
+EXEC Castell_EraseName @tempgmnv, 'gmversion'
+EXEC Castell_GetValue @tempgmnv, 'recid', @recid OUTPUT
+EXEC Castell_EraseName @tempgmnv, 'recid'
+EXEC Castell_GetValue @tempgmnv, 'accountno', @accountno OUTPUT
+EXEC Castell_EraseName @tempgmnv, 'accountno'
+EXEC Castell_GetValue @tempgmnv, 'notes', @notes OUTPUT
+EXEC Castell_EraseName @tempgmnv, 'notes'
+
+
+IF @user IS NULL
+    BEGIN
+        EXEC Castell_Delete @tempgmnv
+        RETURN -130
+    END
+
+IF @accountno IS NULL
+    BEGIN
+        EXEC Castell_Delete @tempgmnv
+        RETURN -180
+    END
+
+IF @notes = ''
+    SELECT @notes = NULL
+
+select @company=company from contact1 where accountno=@accountno
+select @contact=contact from contact1 where accountno=@accountno
+
+IF @recid = ''
+    SELECT @recid = NULL
+
+IF @recid IS NULL --creating a new record
+    BEGIN
+        --Get the Recids we need
+        set @recid = (select dbo.Castell_RecId('MASTER'))
+		waitfor delay '00:00:00.010' --make sure we don't get the same recid for both!
+        set @crecid = (select dbo.Castell_RecId('MASTER'))
+        --Update Tlogs
+		EXEC Castell_UpdateSyncLog 'OPMGR', @recid, @user, 'N'
+		--Inert the new empty Opportunity record
+		INSERT INTO OPMGR 
+		(OPID,RECTYPE,ACCOUNTNO,USERID,FLAGS,COMPANY,CONTACT,NAME,STATUS,CYCLE,STAGE,SOURCE,F1,F2,F3,STARTDATE,CLOSEDDATE,CLOSEBY,FORAMT,FORPROB,CLOSEAMT,NOTES,U_STAGE,recid,PRODUCTNAME) 
+		VALUES 
+		(@recid,'P',@accountno,@user, '', @company, @contact, '', '', '', '', '', '', '', '',NULL,NULL,NULL,0,0,0, '', '',@recid, '')
+		--Inert the Opportunity-Contact link record
+		INSERT INTO OPMGR 
+		(OPID,RECTYPE,ACCOUNTNO,USERID,FLAGS,COMPANY,CONTACT,NAME,STATUS,CYCLE,STAGE,SOURCE,F1,F2,F3,STARTDATE,CLOSEDDATE,CLOSEBY,FORAMT,FORPROB,CLOSEAMT,NOTES,U_STAGE,recid,PRODUCTNAME) 
+		VALUES 
+		(@recid,'PC',@accountno,'', NULL, @company, @contact, '', '', '', NULL, NULL, NULL, NULL, NULL,NULL,NULL,NULL,NULL,NULL,NULL, '', '',@crecid, NULL)
+    END
+
+--modify fields on the existing (or newly created) record
+if exists (select * from sysobjects where id = object_id('#tempgmnv') and sysstat & 0xf = 4)
+	drop table #tempgmnv
+
+SELECT @namefield 'name', @valuefield 'value' INTO #tempgmnv
+DELETE FROM #tempgmnv WHERE name IS NULL
+
+INSERT INTO #tempgmnv
+EXEC ('SELECT fieldname, value FROM ##gmnv' + @tempgmnv)
+
+EXEC Castell_Delete @tempgmnv
+
+DECLARE fieldcursor CURSOR 
+FOR SELECT name, value FROM #tempgmnv
+
+OPEN fieldcursor
+
+FETCH NEXT FROM fieldcursor INTO @fieldname, @value
+
+WHILE @@fetch_status = 0
+	BEGIN
+		SELECT @datatype=DATA_TYPE from INFORMATION_SCHEMA.COLUMNS where COLUMN_NAME = @fieldname and TABLE_NAME = 'OPMGR'
+
+		BEGIN
+			SELECT @setcmd1 = ' [' + @fieldname + '] = ' 
+			+
+			CASE  --deal with data types that require quotes versus those that don't.  Also deal with NULL
+				WHEN UPPER(@datatype) NOT IN ('FLOAT', 'INT', 'REAL','NUMERIC','SMALLINT','TINYINT','DECIMAL') AND @value IS NOT NULL THEN '"' + REPLACE(@value,'"','""') + '"'
+				WHEN @value IS NULL THEN 'NULL' 
+				ELSE @value 
+			END 
+			+
+			CASE 
+				WHEN UPPER(@fieldname) IN ('STAGE') AND @value IS NOT NULL THEN ', u_' + @fieldname + ' = ''' + UPPER(REPLACE(@value, '"', '""')) + ''''
+				WHEN UPPER(@fieldname) IN ('STAGE') AND @value IS NULL THEN ', u_' + @fieldname + ' = ''''' 
+				ELSE '' 
+			END
+			+ 
+			' WHERE recid = ' 
+			+ 
+			CASE  --deal with recids with quote marks in them
+				WHEN @recid LIKE '%''%' THEN '"' + @recid + '"'
+				WHEN @recid LIKE '%"%'  THEN '''' + @recid + '''' 
+				ELSE '''' + @recid + ''''
+ 			END
+
+			EXEC('UPDATE OPMGR SET ' + @setcmd1)
+
+			EXEC Castell_UpdateSyncLog 'OPMGR', @recid, @user, 'U', @fieldname
+		END
+
+		FETCH NEXT FROM fieldcursor INTO @fieldname, @value
+	END
+CLOSE fieldcursor
+DEALLOCATE fieldcursor
+
+If @notes is not NULL
+	BEGIN
+		set @nrecid = (select dbo.Castell_RecId('MASTER'))
+		INSERT INTO NOTES (CREATEDDATE,USERID,MODIFIEDDATE,MODIFIEDBY,LOPRECID,ACCOUNTNO,NOTE,RECTYPE,EXT,recid)
+		VALUES (getdate(),@user,getdate(),@user,@recid,@accountno,@notes,'PR','html',@nrecid)
+	END
+
+
+EXEC Castell_SetValue @gmnv, 'recid', @recid
+
+EXEC Castell_Delete @tempgmnv
+
+
+
+
+
+
+
+
+
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[Castell_WriteRecordAlert] (@accountno varchar(20), @AlertCode varchar(3), @LogHistory varchar(1), @User varchar(8)) 
+AS 
+SET NOCOUNT ON
+
+declare 
+@currstatus varchar (2),
+@gmnv varchar(20),
+@AlertVal varchar(15),
+@CSRecid varchar(15)
+
+
+if (@accountno<>'' and @accountno is not null) and (@AlertCode<>'' and @AlertCode is not null) and (@User<>'' and @User is not null)
+	BEGIN
+		--Get the current phone/curtaining values from the status field
+		select @currstatus=left(status,2) from contact1 where accountno=@accountno
+
+		--Set record alert status flag
+		update dbo.contact1 set status=@currstatus+'1' where accountno=@accountno
+
+		--remove any existing record alert on this record for the same code
+		delete from contsupp where rectype='A' and accountno=@accountno and notes like '~'+@ALERTCODE+'~%'
+		if @LogHistory<>'1' 
+			BEGIN
+				set @LogHistory=''
+			END
+
+		set @AlertVal='~'+@ALERTCODE+'~'+@user+@LogHistory
+
+		--Add record alert
+		EXEC dbo.Castell_Create @gmnv OUTPUT
+
+		EXEC dbo.Castell_SetValue @gmnv, 'User', @User
+		EXEC dbo.Castell_SetValue @gmnv, 'RecType', 'A'
+		EXEC dbo.Castell_SetValue @gmnv, 'Accountno', @accountno 
+		EXEC dbo.Castell_SetValue @gmnv, 'Notes', @AlertVal
+
+		EXEC dbo.Castell_WriteContSupp @gmnv
+
+		Exec dbo.Castell_GetValue @gmnv,'RECID', @CSRecid OUTPUT 
+		EXEC dbo.Castell_EraseName @gmnv, 'recid'
+		EXEC dbo.Castell_Delete @gmnv
+	END
+GO
+
 SET ANSI_NULLS ON
 GO
 
@@ -3971,10 +4154,9 @@ GO
 
 
 
-
 CREATE PROCEDURE [dbo].[Castell_WriteRelationship] (@gmnv varchar(20))
 AS
-
+  
 DECLARE @accountno varchar(20),
 		@parentaccountno varchar(20),
 		@tempvalue varchar(8000),
@@ -3991,31 +4173,31 @@ DECLARE @accountno varchar(20),
 		@ref varchar(35),
 		@recid varchar(15),
 		@bookaccountno varchar(20)
-
+  
 SET NOCOUNT OFF
 /*returns -120 bad gmnv
           -130 Required parameter invalid or not passed*/
           
 IF (SELECT object_id('tempdb..##gmnv' + @gmnv )) IS NULL
             RETURN -120
-
+  
 EXEC Castell_GetValue @gmnv, 'user', @user OUTPUT
 IF @user IS NULL
     RETURN -130
-
+  
 EXEC Castell_GetValue @gmnv, 'accountno', @accountno OUTPUT
 --IF @accountno IS NULL
 --    RETURN -130
-
+  
 EXEC Castell_GetValue @gmnv, 'level', @level OUTPUT
-IF @level IS NULL or (upper(@level) not in ('BOOK','FOLDER','CONTACT','1','3','6'))
+IF @level IS NULL or (upper(@level) not in ('BOOK','FOLDER','FOLDER2','CONTACT','1','3','6'))
     RETURN -130
-
+  
 EXEC Castell_CreateCopy @gmnv, @tempgmnv OUTPUT
-
+  
 /*Establish that this is relationship tree entry*/
 EXEC Castell_SetValue @tempgmnv, 'rectype', 'O'
-
+  
 /*city field*/
 IF @recid IS NULL OR @recid = 'null' or @recid=''
     BEGIN
@@ -4033,23 +4215,20 @@ IF @recid IS NULL OR @recid = 'null' or @recid=''
     
 EXEC Castell_GetValue @gmnv, 'label', @label OUTPUT
 EXEC Castell_GetValue @gmnv, 'parentid', @parentid OUTPUT
-
+  
 if @parentid is not null and @parentid<>'' 
-	begin
+        begin
 		select @parentaccountno=contact from CONTSUPP where RECTYPE='O' and recid=@parentid
-	end
-	
+        end
+        
 if @parentid is null
-	begin
+        begin
 		set @parentaccountno=@accountno
-	end
-	
-	
-/*Level fun
-	This procedure does not (yet) account for multiple nested folder levels 
-*/
+        end
+        
+/*Level fun*/
 if upper(@level)='BOOK' or @level='1'
-	BEGIN
+    BEGIN
 		set @mergecodes='**'
 		set @label='  ' + @label
 		set @bookaccountno=(select dbo.Castell_AccountNo())
@@ -4057,40 +4236,67 @@ if upper(@level)='BOOK' or @level='1'
 		EXEC Castell_SetValue @tempgmnv, 'ext', '1'
 		EXEC Castell_SetValue @tempgmnv, 'contact', @bookaccountno
 		EXEC Castell_SetValue @gmnv, 'accountno', '                    '
-	END
+    END
 if upper(@level)='FOLDER' or @level='3'
-	BEGIN
+    BEGIN
 		set @mergecodes='**'
-		
-		select @ref=contsupref from CONTSUPP where RECTYPE='O' and recid=@parentid
-		set @ref=@ref+'00500'
+		--Figure out sub-folder name code, by adding 00500 to the value of the top folder (or that of the sub-folder if any)
+		set @ref=(select top 1 cast(contsupref as bigint)+500 from contsupp where contact=@parentaccountno and ext=3 and len(contsupref)=10 order by cast(contsupref as bigint) desc)
+  
+		if isnull(@ref,'')='' 
+		begin
+			set @ref=(select top 1 cast(concat(contsupref , '00000')  as bigint)+500   from contsupp where contact=@parentaccountno  and ext=1 order by cast(concat(contsupref , '00000')  as bigint) desc)
+		end
+  
 		EXEC Castell_SetValue @tempgmnv, 'contsupref', @ref
-		
 		set @label='  '+@label
-
 		EXEC Castell_SetValue @tempgmnv, 'ext', '3'
 		EXEC Castell_SetValue @tempgmnv, 'contact', @parentaccountno 
 		EXEC Castell_SetValue @gmnv, 'accountno', @accountno
-	END
+    END
+  
+if upper(@level)='FOLDER2'
+    BEGIN
+		set @mergecodes='**'
+		--Figure out sub-folder name code, by adding 00500 to the value of the parent folder (or that of the sub-folder if any)
+		set @ref=(select top 1 cast(concat(contsupref , '00000')  as bigint)+500 from contsupp where recid=@parentid order by cast(concat(contsupref , '00000')  as bigint) desc)
+ 
+		EXEC Castell_SetValue @tempgmnv, 'contsupref', @ref
+		set @label='  '+@label
+		EXEC Castell_SetValue @tempgmnv, 'ext', '3'
+		EXEC Castell_SetValue @tempgmnv, 'contact', @parentaccountno 
+		EXEC Castell_SetValue @gmnv, 'accountno', @accountno
+    END
+
 if upper(@level)='CONTACT' or @level='6'
-	BEGIN
+    BEGIN
 		set @mergecodes='**'
 		select @ref=contsupref from CONTSUPP where RECTYPE='O' and recid=@parentid
 		set @ref=@ref+' '+(select contact from CONTACT1 where ACCOUNTNO=@accountno)
-
+  
 		EXEC Castell_SetValue @tempgmnv, 'contsupref', @ref
-		
-		select @label=contact from CONTACT1 where ACCOUNTNO=@accountno
+		/*Label the contact's entry*/	
+		if isnull(@label,'')='' 
+		begin
+			/*prefer the contact name*/
+			select @label=isnull(contact,'') from CONTACT1 where ACCOUNTNO=@accountno
+			if isnull(@label,'')='' 
+				begin
+					/*fall back to company name*/
+					select @label=isnull(company,'') from CONTACT1 where ACCOUNTNO=@accountno
+				end
+		end
+
 		set @label='  '+@label
 		
 		EXEC Castell_SetValue @tempgmnv, 'ext', '6'
 		EXEC Castell_SetValue @tempgmnv, 'contact', @parentaccountno
 		EXEC Castell_SetValue @gmnv, 'accountno', @accountno
-	END
-
+    END
+  
 EXEC Castell_SetValue @tempgmnv, 'address1', @label
 EXEC Castell_SetValue @tempgmnv, 'mergecodes', @mergecodes
-
+  
 /*and the NULL junk fields*/
 EXEC Castell_SetValue @tempgmnv, 'title', NULL
 EXEC Castell_SetValue @tempgmnv, 'status', NULL
@@ -4106,31 +4312,22 @@ EXEC Castell_SetValue @tempgmnv, 'ZIP', NULL
 EXEC Castell_SetValue @tempgmnv, 'COUNTRY', NULL
 EXEC Castell_SetValue @tempgmnv, 'STATUS', NULL
 EXEC Castell_SetValue @tempgmnv, 'LINKEDDOC', NULL
-
+  
 /*call WriteContSupp to make the record*/
 EXEC Castell_WriteContsupp @tempgmnv
-
+  
 EXEC Castell_GetValue @tempgmnv, 'recid', @recid OUTPUT
 EXEC Castell_SetValue @gmnv, 'recid', @recid
-
-    
-
-
-
-
-
-
-
-
-
+  
+EXEC Castell_Delete @tempgmnv
 GO
 
-/****** Object:  StoredProcedure [dbo].[Castell_WriteSchedule]    Script Date: 3/21/2019 10:22:52 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER OFF
 GO
+
 
 
 
@@ -4150,7 +4347,7 @@ DECLARE @currdate datetime,
 		@tempgmnv varchar(20),
 		@user varchar(8),
 		@fieldname varchar(50),
-		@value varchar(8000),
+		@value varchar(max),
 		@datatype varchar(20),
 		@accountno varchar(20),
 		@ref varchar(65),
@@ -4170,7 +4367,7 @@ DECLARE @currdate datetime,
 		@caldb sysname,
 		@setcmd1 varchar(max),
 		@namefield varchar(20),
-		@valuefield varchar(8000),
+		@valuefield varchar(max),
 		@calondate   datetime,
 		@calontime   varchar(5),
 		@calrectype  varchar(1),
@@ -4618,3 +4815,6 @@ IF @accountno IS NOT NULL
 GO
 
 
+print ''
+print ''
+print 'The 4 errors above are due to the order in which the procedures are created and are entirely expected. Everything is OK! :)'
